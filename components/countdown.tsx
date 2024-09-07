@@ -15,7 +15,7 @@ const CountdownTimer: React.FC = () => {
   const [glitch, setGlitch] = useState(false);
 
   const calculateTimeLeft = () => {
-    const eventDate = new Date('2024-09-20T00:00:00');
+    const eventDate = new Date('2024-09-21T11:00:00');
     const currentTime = new Date();
     const difference = eventDate.getTime() - currentTime.getTime();
 
@@ -93,12 +93,13 @@ const CountdownTimer: React.FC = () => {
       </div>
 
       {!isMinimized && (
-        <div className="flex items-center justify-center h-full z-10">
+        <div className="flex flex-col items-center justify-center min-h-full z-10">
           <div className="text-[6rem] leading-none">
             <div className={`${myFont.className} glitch ${glitch ? 'glitch-active' : ''}`} data-text={countdownDisplay}>
               {countdownDisplay}
             </div>
           </div>
+          <div className={`${myFont.className} text-7xl text-neutral-950`} >DECPTIONS</div>
         </div>
       )}
       

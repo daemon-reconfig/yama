@@ -1,8 +1,7 @@
-"use client";
-
 import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/text-generator";
 import { YamaText } from "./yamatext";
+import { CardSpotlight } from "./ui/spotlight";
 
 export default function AboutPage() {
   const yamaDescription = `
@@ -10,19 +9,21 @@ export default function AboutPage() {
   `;
 
   return (
-    <div className={cn("p-8 max-w-4xl mx-auto text-center relative z-10")}> {/* Adjusted padding */}
-      <div className="relative mb-8">
-        <YamaText />
-      </div>
+    <CardSpotlight className="flex flex-col justify-center items-center w-full h-full">
+      <div className={cn("p-8 max-w-4xl text-center relative z-20 w-full")}>
+        <div className="relative">
+          <YamaText />
+        </div>
 
-      <div className="text-base leading-relaxed text-neutral-300 max-w-full">
-        <TextGenerateEffect
-          words={yamaDescription}
-          filter={true}
-          duration={0.8}
-          className="text-neutral-200"
-        />
+        <div className="text-base leading-relaxed text-neutral-300 max-w-full mt-6 overflow-y-visible">
+          <TextGenerateEffect
+            words={yamaDescription}
+            filter={true}
+            duration={0.8}
+            className="text-neutral-200"
+          />
+        </div>
       </div>
-    </div>
+    </CardSpotlight>
   );
 }

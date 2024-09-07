@@ -45,22 +45,22 @@ export const BackgroundBeamsWithCollision = ({
       {
         initialX: 800,
         translateX: 800,
-        duration: 11,
-        repeatDelay: 2,
+        duration: 8,
+        repeatDelay: 1,
         className: "h-20",
       },
       {
         initialX: 1000,
         translateX: 1000,
         duration: 4,
-        repeatDelay: 2,
+        repeatDelay: 1,
         className: "h-12",
       },
       {
         initialX: 1200,
         translateX: 1200,
-        duration: 6,
-        repeatDelay: 4,
+        duration: 3,
+        repeatDelay: 1,
         delay: 2,
         className: "h-6",
       },
@@ -70,7 +70,7 @@ export const BackgroundBeamsWithCollision = ({
       <div
         ref={parentRef}
         className={cn(
-          "h-96 md:h-[40rem] bg-black relative flex items-center w-full justify-center overflow-hidden",
+          "h-96 md:h-[40rem] bg-black relative flex items-center w-full justify-center overflow-hidden z-10",
           className
         )}
       >

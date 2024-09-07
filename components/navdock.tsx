@@ -17,7 +17,7 @@ export function NavDock() {
       icon: (
         <IconHome className="h-full w-full text-terminal-green" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
@@ -39,7 +39,7 @@ export function NavDock() {
       icon: (
         <IconExchange className="h-full w-full text-terminal-green" />
       ),
-      href: "#",
+      href: "/changelog",
     },
 
     {

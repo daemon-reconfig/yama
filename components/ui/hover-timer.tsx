@@ -36,7 +36,7 @@ export const EvervaultCard: React.FC<EvervaultCardProps> = ({ className }) => {
   return (
     <div
       className={cn(
-        "bg-transparent w-full h-full relative ",
+        "bg-black w-full h-full relative ",
         className
       )}
     >

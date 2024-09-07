@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   images: [
     {
       url: "file.png",
-      alt: "YAMA",
+      alt: "YAMA", 
     },
   ],
 } as Metadata & { images: { url: string; alt: string }[] };

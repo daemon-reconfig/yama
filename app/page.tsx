@@ -10,10 +10,10 @@ export default function Home() {
     {/* add favicon */}
     <link rel="icon" href="/favicon.ico" />
     <EvervaultCard />
-    <BackgroundBeamsWithCollision>
-        <div className="mt-10">
+    <BackgroundBeamsWithCollision >
+      
             <About />
-        </div>
+        
     </BackgroundBeamsWithCollision>     
     <div className="fixed bottom-0 left-0 right-0 z-20">
       <NavDock />
