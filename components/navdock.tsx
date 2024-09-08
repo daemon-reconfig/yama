@@ -41,7 +41,13 @@ export function NavDock() {
       ),
       href: "/changelog",
     },
-
+    {
+      title: "Challenges",
+      icon: (
+        <IconFlag className="h-full w-full text-terminal-green" />
+      ),
+      href: "/challenges",
+    },
     {
       title: "Discord",
       icon: (
@@ -56,6 +62,7 @@ export function NavDock() {
       ),
       href: "#",
     },
+    
   ];
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full flex items-center justify-center p-4">
