@@ -22,7 +22,7 @@ export default function Changelog() {
         </header>
         <div className="space-y-6">
           {events.map((event, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-md shadow-md">
+            <div key={index} className="bg-gray-800 shadow-md bg-gray-800 p-6 rounded-md shadow-md transform transition-transform duration-100 hover:scale-105 hover:shadow-lg hover:border-green-500 border-transparent border-2">
               <div className="flex items-center space-x-3">
                 <div className="text-terminal-green">{event.icon}</div>
                 <div>

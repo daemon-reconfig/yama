@@ -99,7 +99,7 @@ const CountdownTimer: React.FC = () => {
               {countdownDisplay}
             </div>
           </div>
-          <div className={`${myFont.className} text-7xl text-neutral-950`} >DECPTIONS</div>
+          <div className={`${myFont.className} text-7xl text-black`}><a href="https://ctf.yama.ninja/" target="_blank" rel="noopener noreferrer">DECPTIONS</a></div>
         </div>
       )}
       

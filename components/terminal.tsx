@@ -11,6 +11,18 @@ export default function Terminal() {
   useEffect(() => {
     // Automatically focus on input field when component mounts
     inputRef.current?.focus();
+
+    // Focus input when user clicks anywhere on the screen
+    const handleFocus = () => {
+      inputRef.current?.focus();
+    };
+
+    document.addEventListener('click', handleFocus);
+
+    // Clean up the event listener when component unmounts
+    return () => {
+      document.removeEventListener('click', handleFocus);
+    };
   }, []);
 
   const handleCommand = async () => {
@@ -34,10 +46,10 @@ export default function Terminal() {
       });
 
       const data = await res.json();
-      setOutput((prev) => prev + `$ ${input}\n${data.output}\n`);
+      setOutput((prev) => prev + `yama@bash:~$ ${input}\n${data.output}\n`);
       setInput(''); // Clear input field
     } catch (error) {
-      setOutput((prev) => prev + `$ ${input}\nError: ${error}\n`);
+      setOutput((prev) => prev + `yama@bash:~$ ${input}\nError: ${error}\n`);
     }
   };
 
