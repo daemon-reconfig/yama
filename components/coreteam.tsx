@@ -46,6 +46,13 @@ const teamMembers = [
 const sponsors = [
 
   {
+    name: "Aayush",
+    contribution: "University Student",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/aayush-aggarwal-437086206/",
+    },
+  },
+  {
     name: "Akshit Gupta",
     contribution: "University Student",
     socials: {
@@ -62,7 +69,7 @@ const sponsors = [
     },
   },
   {
-    name: "Ashim bhardwaj",
+    name: "Ashim",
     contribution: "University Student",
     socials: {
       github: "https://github.com/among1anonymous",

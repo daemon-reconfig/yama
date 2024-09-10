@@ -1,6 +1,4 @@
-// components/challenges.tsx
-"use client"; // Ensure this directive is at the top
-
+"use client";
 import React, { useState, useEffect } from "react";
 import { CanvasRevealEffect } from "./ui/canvas";
 import Confetti from "react-confetti";
@@ -38,7 +36,7 @@ const initialChallenges: Challenge[] = [
     title: "Mini Challenge 2: DoubleIT",
     description: "Decrypt the message",
     date: "2024-09-05",
-    task: "(&u}\")E_|sq7+%#K6'g}s87\"ll",
+    task: "(&u}\")E_|sq7+%#K6'g\`}s8\`7\"ll",
     hint: "What's better than an encoding then rotation?",
     solution: "Rotate the encoded string, 47 times and then apply Base64 decode to get the flag.\nYou can use cyberchef.io for this",
     level: "Medium",
@@ -75,7 +73,6 @@ const initialChallenges: Challenge[] = [
   // Additional challenges
 ];
 
-
 const CodeWithCopy: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = useState(false);
 
@@ -98,8 +95,6 @@ const CodeWithCopy: React.FC<{ code: string }> = ({ code }) => {
     </div>
   );
 };
-
-
 
 const Challenges: React.FC = () => {
   const [challenges, setChallenges] = useState<Challenge[]>(initialChallenges);
@@ -127,7 +122,7 @@ const Challenges: React.FC = () => {
     setChallenges((prevChallenges) =>
       prevChallenges.map((challenge) =>
         challenge.id === id
-          ? { ...challenge, completed: !challenge.completed, solves: challenge.solves + 1 }
+          ? { ...challenge, completed: !challenge.completed, solves: challenge.solves + 1 } // Increment solves on completion
           : challenge
       )
     );
@@ -145,7 +140,7 @@ const Challenges: React.FC = () => {
           ...prevConfetti,
           [id]: true,
         }));
-        handleCompleteChallenge(id);
+        handleCompleteChallenge(id); // Mark as completed and increment solves
       } else {
         setFeedback((prevFeedback) => ({
           ...prevFeedback,
@@ -174,26 +169,25 @@ const Challenges: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gray-900 text-white">
+    <div className="relative min-h-screen overflow-hidden text-white">
       <CanvasRevealEffect
         animationSpeed={0.6}
         colors={[[0, 255, 0]]}
         opacities={[0.2, 0.4, 0.6, 0.8, 1]}
-        containerClassName="absolute inset-0"
+        containerClassName="absolute inset-0 bg-gray-900"
       />
-      <div className="relative z-10 p-6 md:p-12">
+      <div className="relative z-10 p-6 md:p-12 bg-grey-900">
         <h1 className="text-4xl font-bold mb-6">Challenges</h1>
-        <p className="mb-12 text-xl">
-          Solve the challenges, and submit the flag in the format: YAMA{'{'}something_inside_this{'}'}
+        <p className="mb-12 text-l">
+        Solve the challenges, and submit the flag in the format: YAMA{'{'}something_inside_this{'}'}
         </p>
         <div className="space-y-6">
           {challenges.map((challenge) => (
-            <div key={challenge.id} className="relative bg-gray-800 p-6 rounded-md shadow-md transform transition-transform duration-100 hover:scale-105 hover:shadow-lg hover:border-green-500 border-transparent border-2">
+            <div key={challenge.id} className="relative p-6 rounded-lg shadow-lg bg-gray-800">
               {/* Solves Section */}
               <p className="absolute top-2 left-2 text-white text-sm font-bold bg-green-600 px-2 py-1 rounded">
                 {challenge.solves} {challenge.solves === 1 ? "Solve" : "Solves"}
-              </p>
-              <br></br>
+              </p><br></br>
               
               {/* Level Badge */}
               <div className="absolute top-2 right-2 px-3 py-1 rounded bg-blue-600 text-white text-sm font-bold">
@@ -202,7 +196,7 @@ const Challenges: React.FC = () => {
 
               <h2 className="text-2xl font-semibold mb-2">{challenge.title}</h2>
               <p className="text-sm mb-2">{challenge.date}</p>
-              <p className="mb-4 text-xl">{challenge.description}</p>
+              <p className="mb-4">{challenge.description}</p>
 
               {/* Code section with Copy functionality */}
               <div className="mb-4">
@@ -225,7 +219,7 @@ const Challenges: React.FC = () => {
                 />
                 <button
                   onClick={() => handleSubmitAnswer(challenge.id, submittedAnswers[challenge.id] || "")}
-                  className={`px-4 py-2 rounded text-white ${challenge.completed ? "bg-red-500" : "bg-blue-600"}`}
+                  className={`px-4 py-2 rounded text-white ${challenge.completed ? "bg-red-500" : "bg-blue-500"}`}
                 >
                   {challenge.completed ? "Submitted" : "Submit Answer"}
                 </button>
@@ -247,27 +241,35 @@ const Challenges: React.FC = () => {
                 </div>
 
                 {/* Feedback, Hint, and Solution */}
-                {feedback[challenge.id] && (
-                  <div className="mt-2 text-lg text-green-500">{feedback[challenge.id]}</div>
+                <p className="text-green-400">{feedback[challenge.id]}</p>
+                {showHint[challenge.id] && (
+                  <p className="bg-green-600 p-4 rounded-lg text-l">{challenge.hint}</p>
                 )}
-                {showHint[challenge.id] && <p className="mt-2 text-yellow-400">{challenge.hint}</p>}
-                {showSolution[challenge.id] && <p className="mt-2 text-red-500">{challenge.solution}</p>}
+                {showSolution[challenge.id] && (
+                  <p className="bg-green-600 p-4 rounded-lg text-l">{challenge.solution}</p>
+                )}
               </div>
-
-              {/* Confetti Effect */}
-              {confetti[challenge.id] && (
-                <Confetti
-                  width={window.innerWidth}
-                  height={window.innerHeight}
-                  recycle={false}
-                />
-              )}
             </div>
           ))}
+          <br />
+          <br />
+          <br />
         </div>
       </div>
+
+      {Object.keys(confetti).map((id) =>
+        confetti[parseInt(id)] ? (
+          <Confetti
+            key={id}
+            numberOfPieces={1000}
+            gravity={0.3}
+            recycle={false}
+          />
+        ) : null
+      )}
     </div>
   );
 };
 
 export default Challenges;
+
