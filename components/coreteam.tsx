@@ -100,6 +100,14 @@ const sponsors = [
       linkedin: "https://www.linkedin.com/in/shivpratapsingh111/",
     },
   },
+  {
+    name: "Siddhant Tiwari",
+    contribution: "University Student",
+    socials: {
+      github: "https://github.com/sidnvt/",
+      linkedin: "https://www.linkedin.com/in/siddhant--tiwari/",
+    },
+  },
   // Add more sponsors here as needed
 ];
 
