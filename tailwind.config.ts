@@ -53,6 +53,7 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			},
 			'terminal-green': '#00ff00',
+			'blood-red': '#FF0000',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
