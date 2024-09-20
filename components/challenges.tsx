@@ -29,11 +29,12 @@ const initialChallenges: Challenge[] = [
     description: "Description: Identify the location shown in the video, go there, and find the hidden poster having a QR code. Scan the code to reveal the flag, then post your proof in the #proof channel on Discord",
     task: "https://drive.google.com/file/d/1_Pr9SnHGeRNE8G_TA9BkjnlaXZfTzvN4/view",
     hint: "Do it on your own",
-    completed: false,
-    solvedBy: "" // Initially empty
+    completed: true,
+    solvedBy: "Rajat Sain" // Initially empty
   },
   // Additional challenges can be added here
 ];
+
 
 const CodeWithCopy: React.FC<{ code: string }> = ({ code }) => {
   const [copied, setCopied] = useState(false);

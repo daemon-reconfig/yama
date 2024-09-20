@@ -100,6 +100,17 @@ const CountdownTimer: React.FC = () => {
             </div>
           </div>
           <div className={`${myFont.className} text-7xl text-black`}><a href="https://ctf.yama.ninja/" target="_blank" rel="noopener noreferrer">DECPTIONS</a></div>
+          <div className={`${myFont.className} text-base text-black`}
+            style={{
+              position: 'absolute',
+              bottom: '10px',  // Adjust the distance from the bottom
+              left: '10px',    // Adjust the distance from the left
+            }} >
+  <a>
+  {'YAMA{THIS_WAS_FUN_RIGHT?}'}
+  </a>
+</div>
+
         </div>
       )}
       
