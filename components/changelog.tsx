@@ -5,8 +5,20 @@ import { IconFlag } from '@tabler/icons-react';
 const events = [
   {
     title: "Deceptions",
-    date: "21 September",
-    description: "Our first CTF event, 'Deceptions', starts on 21 September. Prepare for a challenging and thrilling experience!",
+    date: "21 September, 2024",
+    description: "Our first CTF event, 'Deceptions'.",
+    icon: <IconFlag className="h-6 w-6 text-terminal-green" />,
+  },
+  {
+    title: "Hexplore",
+    date: "23 October, 2024",
+    description: "Hands on CTF and Hacking Workshop.",
+    icon: <IconFlag className="h-6 w-6 text-terminal-green" />,
+  },
+  {
+    title: "Road to NCIIPC Pentathon",
+    date: "18-22 March, 2025",
+    description: "Hands on CTF Bootcamp to train for NCIIPC Pentathon",
     icon: <IconFlag className="h-6 w-6 text-terminal-green" />,
   },
   // Add more events here as they are announced

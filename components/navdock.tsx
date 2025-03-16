@@ -29,7 +29,7 @@ export function NavDock() {
       icon: (
         <IconUser className="h-full w-full text-terminal-green" />
       ),
-      href: "https://ctf.yama.ninja",
+      href: "https://forms.gle/8nSYw6pyjmaeFE3m9",
     },
     {
       title: "Terminal",
@@ -80,13 +80,13 @@ export function NavDock() {
       ),
       href: "/coreteam",
     },
-    {
-      title: "FAQs",
-      icon: (
-        <IconQuestionMark className="h-full w-full text-terminal-green" />
-      ),
-      href: "/faq",
-    },
+    // {
+    //   title: "FAQs",
+    //   icon: (
+    //     <IconQuestionMark className="h-full w-full text-terminal-green" />
+    //   ),
+    //   href: "/faq",
+    // },
   ];
   return (
     <div className="fixed bottom-0 left-0 z-50 w-full flex items-center justify-center p-4">

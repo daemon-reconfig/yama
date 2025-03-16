@@ -3,15 +3,15 @@ import React from "react";
 import { IconBrandGithub, IconBrandLinkedin, IconBrandMedium } from "@tabler/icons-react";
 
 const teamMembers = [
-  {
-    name: "Akshit Gupta",
-    role: "Red Teamer & Malware Dev",
-    description: "Akshit is our tactical genius in the world of offensive security, expertly simulating attacks to fortify our defenses.",
-    socials: {
-      github: "https://github.com/pwnNrove",
-      linkedin: "https://www.linkedin.com/in/pwnnrove/",
-    },
-  },
+  // {
+  //   name: "Akshit Gupta",
+  //   role: "Red Teamer & Malware Dev",
+  //   description: "Akshit is our tactical genius in the world of offensive security, expertly simulating attacks to fortify our defenses.",
+  //   socials: {
+  //     github: "https://github.com/pwnNrove",
+  //     linkedin: "https://www.linkedin.com/in/pwnnrove/",
+  //   },
+  // },
   {
     name: "Ashim",
     role: "Security Researcher",
@@ -46,6 +46,13 @@ const teamMembers = [
 const sponsors = [
 
   {
+    name: "Aayush",
+    contribution: "University Student",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/aayush-aggarwal-437086206/",
+    },
+  },
+  {
     name: "Akshit Gupta",
     contribution: "University Student",
     socials: {
@@ -61,14 +68,6 @@ const sponsors = [
       linkedin: "https://www.linkedin.com/in/amit-panghal/",
     },
   },
-
-  {
-    name: "Anonymous",
-    contribution: "University Student",
-    socials: {
-    },
-  },
-
   {
     name: "Ashim",
     contribution: "University Student",
@@ -99,14 +98,6 @@ const sponsors = [
     socials: {
       github: "https://github.com/shivpratapsingh111/",
       linkedin: "https://www.linkedin.com/in/shivpratapsingh111/",
-    },
-  },
-  {
-    name: "Siddhant Tiwari",
-    contribution: "University Student",
-    socials: {
-      github: "https://github.com/sidnvt/",
-      linkedin: "https://www.linkedin.com/in/siddhant--tiwari/",
     },
   },
   // Add more sponsors here as needed
